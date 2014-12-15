@@ -1,3 +1,5 @@
+This is a repository for trail - a new way of trailing logs real time
+
 Steps to launch Trail:
 
 1. cd kibana/sample
