@@ -1,4 +1,7 @@
-Launch webserver
-cd kibana/sample
-node server.js
-http://localhost:8000/index.html#/dashboard/file/logstash.json
+Steps to launch Trail:
+
+1. cd kibana/sample
+2. node server.js
+ 
+Go to a browser and launch: http://localhost:8000/index.html#/dashboard/file/logstash.json
+(Ensure that elastic-search is running)
