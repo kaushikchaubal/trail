@@ -5,4 +5,5 @@ Steps to launch Trail:
 2. node server.js
  
 Go to a browser and launch: http://localhost:8000/index.html#/dashboard/file/logstash.json
-(Ensure that elastic-search is running on localhost:9200)
+
+Note - Ensure that elastic-search is running on localhost:9200
