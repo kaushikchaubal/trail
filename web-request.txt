@@ -1,0 +1,17 @@
+// Alias
+curl -XGET 'http://localhost:9200/logstash-2014.12.14,logstash-2014.12.15/_aliases?ignore_unavailable=true&ignore_missing=true'
+
+// Options - Search count
+http://localhost:9200/logstash-2014.12.15/_search?search_type=count
+
+// Options - Search
+http://localhost:9200/logstash-2014.12.15/_search
+
+// Mapping
+http://localhost:9200/logstash-2014.12.15/_mapping
+
+// Search Count (Type 2)
+curl -XPOST "http://localhost:9200/logstash-2014.12.15/_search?search_type=count" -d '{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"10m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"twikiRobot46x50"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1418595558024,"to":1418681958024}}}]}}}}}}}},"size":0}'
+
+// Search (Type 3)
+curl -XPOST "http://localhost:9200/_search" -d'{"query":{"filtered":{"query":{"bool":{"should":[{"query_string":{"query":"twikiRobot46x50"}}]}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1418595558025,"to":1418681958025}}}]}}}},"highlight":{"fields":{},"fragment_size":2147483647,"pre_tags":["@start-highlight@"],"post_tags":["@end-highlight@"]},"size":500,"sort":[{"@timestamp":{"order":"desc","ignore_unmapped":true}},{"@timestamp":{"order":"desc","ignore_unmapped":true}}]}'
