@@ -26,3 +26,5 @@ curl -XPOST "http://localhost:9200/logstash-2014.12.15/_search?search_type=count
  
 // Seach count - Style 2: Complicated query
 curl -XPOST "http://localhost:9200/logstash-2014.12.15/_search?search_type=count" -d '{"facets":{"0":{"date_histogram":{"field":"@timestamp","interval":"10m"},"global":true,"facet_filter":{"fquery":{"query":{"filtered":{"query":{"query_string":{"query":"twikiRobot46x50"}},"filter":{"bool":{"must":[{"range":{"@timestamp":{"from":1418595558024,"to":1418681958024}}}]}}}}}}}},"size":0}'
+
+Note - style 1 and 2 create the same result
