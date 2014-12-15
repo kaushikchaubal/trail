@@ -1,4 +1,4 @@
-trail
-=====
-
-This is a repository for trail - a new way of trailing logs
+Launch webserver
+cd kibana/sample
+node server.js
+http://localhost:8000/index.html#/dashboard/file/logstash.json
