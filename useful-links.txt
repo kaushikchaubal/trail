@@ -1,0 +1,1 @@
+http://okfnlabs.org/blog/2013/07/01/elasticsearch-query-tutorial.html
